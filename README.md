@@ -41,79 +41,53 @@ This program uses third-party auth with Google or Facebook. Some of the technolo
 
 ## JSON Endpoints
 
-`/api/v1/catalog.json` - Returns JSON of all items in catalog
+`/category/JSON` - Returns JSON of all categories in catalog
 
-<img src="assets/catalogJSON.png" width="800">
+<img src="screenshots/categoryJSON.png" width="1000">
 
-`/api/v1/categories/<int:category_id>/item/<int:catalog_item_id>/JSON` - Returns JSON of selected item in catalog
+`/category/<int:cid>/list/<int:mid>/JSON` - Returns JSON of selected item in category
 
-<img src="assets/catalog-itemJSON.png" width="800">
+<img src="screenshots/particularitemJSON.png" width="1000">
 
-`/api/v1/categories/JSON` - Returns JSON of all categories in catalog
+`/category/<int:cid>/list/JSON` - Returns JSON of all items in particular category in catalog
 
-<img src="assets/categoriesJSON.png" width="800">
+<img src="screenshots/jsonforparticularcategory.png" width="1000">
 
-## REST Endpoints
+## Landing Page(not yet logged in)
+`/category`
 
-#### --------------------------------------
-#### CRUD for categories
-#### --------------------------------------
+<img src="screenshots/landing.png" width="1000">
 
-`/` or `/categories` - Returns catalog page with all categories and recently added items
+## Authentication(Logging in)
 
-<img src="assets/categories1.png" width="800">
+`/login` 
 
-<img src="assets/categories-loggedin.png" width="800">
+<img src="screenshots/authentication.png" width="1000">
 
-`/categories/new` - Allows user to create new category
+## Landing Page(Logged in)
 
-<img src="assets/category-new.png" width="800">
+`/login` 
 
-`/categories/<int:category_id>/edit/` - Allows user to edit an existing category
-
-<img src="assets/category-edit.png" width="800">
-
-`/categories/<int:category_id>/delete/` - Allows user to delete an existing category
-
-<img src="assets/category-delete.png" width="800">
-
-#### --------------------------------------
-#### CRUD for category items
-#### --------------------------------------
-
-`/categories/<int:category_id>/` or `/categories/<int:category_id>/items/` - returns items in category
-
-<img src="assets/catalog-item.png" width="800">
-
-`/categories/<int:category_id>/item/<int:catalog_item_id>/` - returns category item
-
-<img src="assets/catalog-item-detail.png" width="800">
-
-`/categories/item/new` - return "This page will be for making a new catalog item
-
-<img src="assets/catalog-item-new.png" width="800">
-
-`/categories/<int:category_id>/item/<int:catalog_item_id>/edit` - return "This page will be for making a updating catalog item"
-
-<img src="assets/catalog-item-edit.png" width="800">
-
-`/categories/<int:category_id>/item/<int:catalog_item_id>/delete` - return "This page will be for deleting a catalog item"
-
-<img src="assets/catalog-item-delete.png" width="800">
-
-#### --------------------------------------
-#### Login
-#### --------------------------------------
-
-`/login` - login page
-
-<img src="assets/login.png" width="800">
+<img src="screenshots/loggedin.png" width="1000">
 
 
+## Adding New Category
+`/category/new` 
+<img src="screenshots/newcategory.png" width="1000">
 
-## Know issues
+## Adding New Item
+While adding info about item, in category list only those categories appear which that user has created
+`'/category/item/new/`
+<img src="screenshots/newItem.png" width="1000">
 
-- No validation on forms
+## Item List(not authorised)
+Example of logged in but not authorised
+<img src="screenshots/loggedinbutnotauthorised.png" width="1000">
+
+## Item List(authorised)
+Example of logged in & authorised
+<img src="screenshots/itemslistwhenloggedinandauthorised.png" width="1000">
+
 
 ## Possible improvements
 
